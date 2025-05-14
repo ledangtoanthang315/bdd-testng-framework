@@ -14,12 +14,11 @@ This is a scalable and modular test automation framework built using **Selenium 
 |   |   |-- java
 |   |   |   |-- pages           # Page classes (POM)
 |   |   |   |-- utils           # Utility classes (e.g., Excel reader, config loader)
+|   |   |   |   |-- hooks       # Cucumber Hooks (Before/After)
 |   |-- test
 |   |   |-- java
 |   |   |   |-- stepdefinitions # Step definitions for Cucumber
 |   |   |   |-- runners         # TestNG runner classes
-|   |   |   |-- hooks           # Cucumber Hooks (Before/After)
-|   |   |   |-- tests           # Additional custom TestNG tests (optional)
 |-- resources
 |   |-- features               # Cucumber feature files
 |   |-- testdata               # Excel or CSV test data files
