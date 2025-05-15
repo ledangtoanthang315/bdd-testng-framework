@@ -120,6 +120,7 @@ Feel free to raise an issue or ping me on GitHub.
 
 Here's how you can use data-test-id attributes with explicit waits in Selenium (Java)—a best practice in UI automation for robust and reliable locators.
 
+
 public class LoginPage {
     private WebDriver driver;
     private WebDriverWait wait;
