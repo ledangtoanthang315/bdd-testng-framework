@@ -118,6 +118,29 @@ Pull requests are welcome. For major changes, open an issue first to discuss wha
 
 Feel free to raise an issue or ping me on GitHub.
 
+Here's how you can use data-test-id attributes with explicit waits in Selenium (Java)—a best practice in UI automation for robust and reliable locators.
+
+public class LoginPage {
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    private By loginButton = By.cssSelector("[data-test-id='login-button']");
+    private By usernameField = By.cssSelector("[data-test-id='username']");
+    private By passwordField = By.cssSelector("[data-test-id='password']");
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    public void login(String username, String password) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField)).sendKeys(username);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys(password);
+        wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
+    }
+}
+
+
 ---
 
 Happy Testing! 🧪✨
