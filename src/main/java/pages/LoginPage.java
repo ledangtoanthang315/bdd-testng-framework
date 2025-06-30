@@ -10,9 +10,9 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    private final By usernameField = By.id("username");
-    private final By passwordField = By.id("password");
-    private final By loginButton = By.id("loginBtn");
+    private final By usernameField = By.id("form.email");
+    private final By passwordField = By.id("form.password");
+    private final By loginButton = By.id("login");
 
     public void login(String username, String password) {
         driver.findElement(usernameField).sendKeys(username);

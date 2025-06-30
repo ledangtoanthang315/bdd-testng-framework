@@ -7,9 +7,7 @@ Feature: Login Feature
 
     Examples:
       | username | password  |
-      | admin    | admin123  |
-      | user1    | pass1     |
-      | qauser   | test@123  |
+      | admin@covergo.com    | zVx*bV3Yh2zHJHJYdkwm  |
 
   Scenario Outline: Invalid login scenarios
     Given user is on the login page

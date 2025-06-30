@@ -9,7 +9,7 @@ public class LoginSteps {
 
     @Given("user is on the login page")
     public void user_is_on_login_page() {
-        DriverManager.getDriver().get("https://example.com/login");
+        DriverManager.getDriver().get("https://asia-admin.preprod.asia.covergo.cloud/login");
     }
 
     @When("user enters username {string} and password {string}")
