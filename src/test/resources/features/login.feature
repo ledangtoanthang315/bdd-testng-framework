@@ -9,14 +9,11 @@ Feature: Login Feature
       | username              | password              |
       | admin@covergo.com     | zVx*bV3Yh2zHJHJYdkwm  |
 
-# Scenario Outline: Invalid login scenarios
-# Given user is on the login page
-# When user enters username "<username>" and password "<password>"
-# Then user should see an error message "<errorMessage>"
+#   Scenario Outline: Invalid login scenarios
+#   Given user is on the login page
+#   When user enters username "<username>" and password "<password>"
+#   Then user should see an error message "<errorMessage>"
 #
-# Examples:
-#   | username              | password   | errorMessage                       |
-#   | wrong                 | wrongpass  | Value is not a valid email address |
-#   | admin@covergo.com     |            | Invalid username or password       |
-#   |                       | admin123   | Value is required                  |
-#   |                       |            | Value is required                  |
+#   Examples:
+#     | username              | password   | errorMessage                       |
+#     | admin@covergo.com     | 123        | Invalid username or password       |

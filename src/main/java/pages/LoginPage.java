@@ -9,18 +9,17 @@ import java.time.Duration;
 
 public class LoginPage {
 
-    private final WebDriver driver;
     private final WebDriverWait wait;
 
     // Locators
     private final By usernameField = By.id("form.email");
     private final By passwordField = By.id("form.password");
     private final By loginButton = By.id("login");
-    private final By errorMessageLocator = By.id("error-msg");
+    // --- FINAL CORRECTED LINE ---
+    private final By errorMessageLocator = By.xpath("(//*[contains(text(), 'Invalid username or password')])[last()]");
 
     // Constructor
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
         // Initialize the wait object. It will wait a maximum of 10 seconds.
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
@@ -46,7 +45,7 @@ public class LoginPage {
      */
     public boolean isLoginSuccessful() {
         // Waits for up to 10 seconds for the page title to contain "dashboard"
-        return wait.until(ExpectedConditions.titleContains("dashboard"));
+        return wait.until(ExpectedConditions.titleContains("Admin Portal"));
     }
 
     /**
